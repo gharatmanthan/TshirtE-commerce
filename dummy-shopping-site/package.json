@@ -1,0 +1,40 @@
+{
+  "name": "dummy-shopping-site",
+  "version": "1.0.0",
+  "description": "A dummy shopping site featuring T-shirts with personalization and cookie consent.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "keywords": [
+    "shopping",
+    "ecommerce",
+    "t-shirts",
+    "react"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-plugin-react": "^7.27.0"
+  },
+  "homepage": "http://yourwebsite.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/dummy-shopping-site.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/dummy-shopping-site/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
