@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< Updated upstream
     <title>Trendy Tees - Shop Cool T-Shirts</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -96,12 +95,6 @@
                 <h1><a href="shop.html">Trendy Tees</a></h1>
             </div>
             <nav class="shop-nav">
-<<<<<<<< Updated upstream:index.html
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#cart" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
-========
                 <ul id="nav-menu">
                     <li><a href="shop.html">Home</a></li>
                     <li><a href="#products">Shop</a></li>
@@ -122,35 +115,17 @@
                             <button><i class="fas fa-search"></i></button>
                         </div>
                     </li>
->>>>>>>> Stashed changes:shop.html
                 </ul>
                 <div class="hamburger" id="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-=======
-    <title>My Profile | Trendy Tees</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <h1>Welcome to My Profile</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="shop.html">Shop Trendy Tees</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
->>>>>>> Stashed changes
             </nav>
         </div>
     </header>
 
-<<<<<<< Updated upstream
+
     <div class="search-overlay" id="search-overlay">
         <div class="container">
             <div class="search-container">
@@ -402,117 +377,64 @@
                         <a href="#">Terms of Service</a>
                         <a href="#">Cookie Policy</a>
                     </div>
-                </div>
-=======
-    <main class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Welcome to my personal page and my T-shirt shop!</p>
-        </section>
-
-        <section id="projects">
-            <h2>My Projects</h2>
-            <!-- Project content -->
-        </section>
-
-        <section id="shop-preview">
-            <h2>Check Out My T-Shirt Shop</h2>
-            <div class="shop-teaser">
-                <img src="images/tshirt-sample.jpg" alt="Trendy T-shirts">
-                <a href="shop.html" class="btn">Visit Shop</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 My Profile. All rights reserved.</p>
-            <div class="theme-switcher">
-                <button id="theme-light">Light</button>
-                <button id="theme-dark">Dark</button>
->>>>>>> Stashed changes
-            </div>
-        </div>
-    </footer>
-
-<<<<<<< Updated upstream
-    <button class="scroll-to-top" id="scroll-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <div class="loading-spinner" id="loading-spinner">
-        <div class="spinner"></div>
-    </div>
-
-    <!-- Cookie Consent Popup -->
-    <div id="cookie-consent" class="cookie-consent" style="display:none;">
-        <div class="cookie-content">
-            <p>
-                We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
-                <a href="#">More info</a>
-            </p>
-            <div class="cookie-buttons">
-                <button id="accept-cookies" class="btn btn-primary">Accept</button>
-                <button id="decline-cookies" class="btn btn-outline">Decline</button>
             </div>
         </div>
     </div>
+</footer>
+<button class="scroll-to-top" id="scroll-to-top">
+    <i class="fas fa-arrow-up"></i>
+</button>
 
-    <script>
-        // Cookie helper functions
-        function setCookie(name, value, days) {
-            const d = new Date();
-            d.setTime(d.getTime() + (days*24*60*60*1000));
-            document.cookie = name + "=" + value + ";expires=" + d.toUTCString() + ";path=/";
+<div class="loading-spinner" id="loading-spinner">
+    <div class="spinner"></div>
+</div>
+
+<!-- Cookie Consent Popup -->
+<div id="cookie-consent" class="cookie-consent" style="display:none;">
+    <div class="cookie-content">
+        <p>
+            We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
+            <a href="#">More info</a>
+        </p>
+        <div class="cookie-buttons">
+            <button id="accept-cookies" class="btn btn-primary">Accept</button>
+            <button id="decline-cookies" class="btn btn-outline">Decline</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Cookie helper functions
+    function setCookie(name, value, days) {
+        const d = new Date();
+        d.setTime(d.getTime() + (days*24*60*60*1000));
+        document.cookie = name + "=" + value + ";expires=" + d.toUTCString() + ";path=/";
+    }
+    function getCookie(name) {
+        const value = "; " + document.cookie;
+        const parts = value.split("; " + name + "=");
+        if (parts.length === 2) return parts.pop().split(";").shift();
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const consent = getCookie('cookiesAccepted');
+        const popup = document.getElementById('cookie-consent');
+        if (!consent) {
+            popup.style.display = 'block';
+        } else {
+            popup.style.display = 'none';
         }
-        function getCookie(name) {
-            const value = "; " + document.cookie;
-            const parts = value.split("; " + name + "=");
-            if (parts.length === 2) return parts.pop().split(";").shift();
-        }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const consent = getCookie('cookiesAccepted');
-            const popup = document.getElementById('cookie-consent');
-            if (!consent) {
-                popup.style.display = 'block';
-            } else {
-                popup.style.display = 'none';
-            }
-
-            document.getElementById('accept-cookies').onclick = function() {
-                setCookie('cookiesAccepted', 'yes', 365);
-                popup.style.display = 'none';
-            };
-            document.getElementById('decline-cookies').onclick = function() {
-                setCookie('cookiesAccepted', 'no', 365);
-                popup.style.display = 'none';
-            };
-
-            // --- Cart Open/Close Logic ---
-            const cartOverlay = document.getElementById('cart-overlay');
-            const cartLink = document.getElementById('cart-link');
-            const closeCartBtn = document.getElementById('close-cart');
-
-            if (cartLink && cartOverlay) {
-                cartLink.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    cartOverlay.style.display = 'block';
-                });
-            }
-            if (closeCartBtn && cartOverlay) {
-                closeCartBtn.addEventListener('click', function() {
-                    cartOverlay.style.display = 'none';
-                });
-            }
-            // Optional: Close cart when clicking outside the sidebar
-            cartOverlay.addEventListener('click', function(e) {
-                if (e.target === cartOverlay) {
-                    cartOverlay.style.display = 'none';
-                }
-            });
-        });
-    </script>
+        document.getElementById('accept-cookies').onclick = function() {
+            setCookie('cookiesAccepted', 'yes', 365);
+            popup.style.display = 'none';
+        };
+        document.getElementById('decline-cookies').onclick = function() {
+            setCookie('cookiesAccepted', 'no', 365);
+            popup.style.display = 'none';
+        };
+    });
+</script>
     <script>
         // Update cart summary details in the sidebar
         function updateCartSummary() {
@@ -572,13 +494,3 @@
     </script>
 </body>
 </html>
-=======
-    <div class="cookie-consent">
-        <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
-        <button id="accept-cookies">Accept</button>
-    </div>
-
-    <script src="main.js"></script>
-</body>
-</html>
->>>>>>> Stashed changes
