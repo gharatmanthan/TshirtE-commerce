@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    .checkout-container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .order-summary {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background: #fafafa;
+    }
+
+    .order-summary h3 {
+      margin-top: 0;
+    }
+
+    .btn {
+      background: #28a745;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="checkout-container">
+    <h2>Checkout</h2>
+    <form>
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" required />
+      </div>
+
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" required />
+      </div>
+
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" id="city" required />
+      </div>
+
+      <div class="form-group">
+        <label for="payment">Payment Method</label>
+        <select id="payment" required>
+          <option value="">Select Payment Method</option>
+          <option value="credit">Credit Card</option>
+          <option value="paypal">PayPal</option>
+          <option value="cod">Cash on Delivery</option>
+        </select>
+      </div>
+
+      <div class="order-summary">
+        <h3>Order Summary</h3>
+        <p>Items: 3</p>
+        <p>Total: ₹0.00</p>
+      </div>
+
+      <button type="submit" class="btn">Place Order</button>
+    </form>
+  </div>
+
+  <script>
+  // Get cart and total from localStorage
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const total = localStorage.getItem('cartTotal') || 0;
+
+  // Count items
+  const itemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+  // Update summary in the DOM
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.order-summary p:nth-child(2)').textContent = `Items: ${itemCount}`;
+    document.querySelector('.order-summary p:nth-child(3)').textContent = `Total: ₹${Number(total).toFixed(2)}`;
+  });
+  </script>
+</body>
+</html>

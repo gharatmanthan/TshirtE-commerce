@@ -1,21 +1,21 @@
 /* Base Styles */
 :root {
-    --primary-color: #4a6fa5;
-    --secondary-color: #166088;
-    --accent-color: #4fc3f7;
-    --light-color: #f8f9fa;
-    --dark-color: #343a40;
-    --success-color: #28a745;
-    --danger-color: #dc3545;
+    --primary-color: #ff7043;      /* Vibrant orange */
+    --secondary-color: #d84315;    /* Deep orange */
+    --accent-color: #ffd54f;       /* Bright yellow */
+    --light-color: #fff8e1;        /* Light cream */
+    --dark-color: #263238;         /* Dark blue-grey */
+    --success-color: #43a047;
+    --danger-color: #e53935;
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 [data-theme="dark"] {
-    --primary-color: #2c3e50;
-    --secondary-color: #1a252f;
-    --accent-color: #3498db;
-    --light-color: #343a40;
-    --dark-color: #f8f9fa;
+    --primary-color: #263238;      /* Dark blue-grey */
+    --secondary-color: #37474f;    /* Slightly lighter blue-grey */
+    --accent-color: #ffb300;       /* Gold */
+    --light-color: #212121;        /* Almost black */
+    --dark-color: #fff8e1;         /* Light cream */
 }
 
 * {
