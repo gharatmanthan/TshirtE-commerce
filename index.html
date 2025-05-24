@@ -142,7 +142,7 @@
     <div class="hero">
         <div class="container">
             <div class="hero-content">
-                <h2>Summer Collection 2023</h2>
+                <h2>Summer Collection 2025</h2>
                 <p>Discover our latest collection of comfortable and stylish t-shirts</p>
                 <a href="#new-arrivals" class="btn btn-primary">Shop Now</a>
             </div>
@@ -478,6 +478,31 @@
             }
         });
     </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const cartOverlay = document.getElementById('cart-overlay');
+    const cartLink = document.getElementById('cart-link');
+    const closeCartBtn = document.getElementById('close-cart');
+
+    if (cartLink && cartOverlay) {
+        cartLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            cartOverlay.style.display = 'block';
+        });
+    }
+    if (closeCartBtn && cartOverlay) {
+        closeCartBtn.addEventListener('click', function() {
+            cartOverlay.style.display = 'none';
+        });
+    }
+    // Optional: Close cart when clicking outside the sidebar
+    cartOverlay.addEventListener('click', function(e) {
+        if (e.target === cartOverlay) {
+            cartOverlay.style.display = 'none';
+        }
+    });
+});
+</script>
     <script src="shop.js"></script>
     <script>
         // Add event listeners to remove buttons

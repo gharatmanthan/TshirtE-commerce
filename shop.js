@@ -845,3 +845,52 @@ if (productModal) {
         }
     });
 }
+
+// Filter buttons HTML
+const filterButtonsHTML = `
+    <button class="filter-btn" data-category="all">All</button>
+    <button class="filter-btn" data-category="men">Men</button>
+    <button class="filter-btn" data-category="women">Women</button>
+    <button class="filter-btn" data-category="unisex">Unisex</button>
+    <button class="filter-btn" data-category="new">New Arrivals</button>
+    <button class="filter-btn" data-category="sale">On Sale</button>
+`;
+
+// Insert filter buttons into the DOM
+const filterContainer = document.getElementById('filter-buttons-container');
+if (filterContainer) {
+    filterContainer.innerHTML = filterButtonsHTML;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Remove 'active' from all buttons
+            filterButtons.forEach(b => b.classList.remove('active'));
+            // Add 'active' to clicked button
+            this.classList.add('active');
+            // Get category and show products
+            const category = this.getAttribute('data-category');
+            displayProducts(category);
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const productModal = document.getElementById('product-modal');
+    const closeModal = document.getElementById('close-modal');
+
+    if (closeModal && productModal) {
+        closeModal.addEventListener('click', function() {
+            productModal.style.display = 'none';
+        });
+    }
+
+    // Optional: Close modal when clicking outside modal content
+    productModal.addEventListener('click', function(e) {
+        if (e.target === productModal) {
+            productModal.style.display = 'none';
+        }
+    });
+});
