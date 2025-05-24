@@ -3,95 +3,439 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< Updated upstream
     <title>Trendy Tees - Shop Cool T-Shirts</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="shop.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .cart-total {
+            border-top: 1px solid #eee;
+            padding: 16px 0 0 0;
+            background: #fafbfc;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 -1px 4px rgba(0,0,0,0.03);
+        }
+        .cart-summary-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 10px 0;
+        }
+        .cart-summary-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+            padding: 4px 0;
+            border-bottom: 1px dashed #eee;
+        }
+        .cart-summary-name {
+            flex: 2;
+        }
+        .cart-summary-qty {
+            flex: 1;
+            text-align: center;
+            color: #888;
+        }
+        .cart-summary-price {
+            flex: 1;
+            text-align: right;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        .cart-total-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin: 10px 0 0 0;
+        }
+        .cart-total-label {
+            color: #333;
+        }
+        .cart-total-value {
+            color: var(--primary-color);
+        }
+        .cart-note {
+            font-size: 0.95em;
+            color: #43a047;
+            margin-top: 8px;
+            text-align: center;
+        }
+        .checkout-btn {
+            background: var(--primary-color);
+            color: #fff;
+            border: none;
+            padding: 12px 0;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .checkout-btn:hover {
+            background: var(--secondary-color);
+        }
+        .cart-empty-summary {
+            text-align: center;
+            color: #888;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <p>Free shipping on orders over ₹2000 | Use code: TRENDY20 for 20% off</p>
+    </div>
+
     <header class="shop-header">
         <div class="container">
             <div class="logo">
                 <h1><a href="shop.html">Trendy Tees</a></h1>
             </div>
             <nav class="shop-nav">
+<<<<<<<< Updated upstream:index.html
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#products">Products</a></li>
                     <li><a href="#cart" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+========
+                <ul id="nav-menu">
+                    <li><a href="shop.html">Home</a></li>
+                    <li><a href="#products">Shop</a></li>
+                    <li><a href="#about-section">About</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
+                    <li>
+                        <a href="#cart" id="cart-link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span id="cart-count">0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#search" id="search-toggle">
+                            <i class="fas fa-search"></i>
+                        </a>
+                        <div class="search-box">
+                            <input type="text" placeholder="Search products...">
+                            <button><i class="fas fa-search"></i></button>
+                        </div>
+                    </li>
+>>>>>>>> Stashed changes:shop.html
                 </ul>
                 <div class="hamburger" id="hamburger">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
+=======
+    <title>My Profile | Trendy Tees</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to My Profile</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="shop.html">Shop Trendy Tees</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+>>>>>>> Stashed changes
             </nav>
         </div>
     </header>
 
+<<<<<<< Updated upstream
+    <div class="search-overlay" id="search-overlay">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" placeholder="What are you looking for?">
+                <button class="search-btn">Search</button>
+                <button class="close-search" id="close-search">&times;</button>
+            </div>
+            <div class="search-suggestions">
+                <p>Popular searches: <a href="#">Graphic Tees</a>, <a href="#">Oversized</a>, <a href="#">Vintage</a></p>
+            </div>
+        </div>
+    </div>
+
     <div class="hero">
         <div class="container">
-            <h2>Trendy Tees for Everyone</h2>
-            <p>Discover our latest collection of comfortable and stylish t-shirts</p>
+            <div class="hero-content">
+                <h2>Summer Collection 2023</h2>
+                <p>Discover our latest collection of comfortable and stylish t-shirts</p>
+                <a href="#new-arrivals" class="btn btn-primary">Shop Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="features-bar">
+        <div class="container">
+            <div class="feature">
+                <i class="fas fa-truck"></i>
+                <span>Free Shipping</span>
+            </div>
+            <div class="feature">
+                <i class="fas fa-undo"></i>
+                <span>Easy Returns</span>
+            </div>
+            <div class="feature">
+                <i class="fas fa-shield-alt"></i>
+                <span>Secure Payment</span>
+            </div>
+            <div class="feature">
+                <i class="fas fa-headset"></i>
+                <span>24/7 Support</span>
+            </div>
         </div>
     </div>
 
     <main class="container">
+        <section class="category-filter">
+            <h3>Shop by Category</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="men">Men</button>
+                <button class="filter-btn" data-category="women">Women</button>
+                <button class="filter-btn" data-category="unisex">Unisex</button>
+                <button class="filter-btn" data-category="new">New Arrivals</button>
+                <button class="filter-btn" data-category="sale">On Sale</button>
+            </div>
+        </section>
+
         <section id="products" class="product-grid">
             <!-- Products will be loaded via JavaScript -->
+            <div class="loading-products">
+                <div class="spinner"></div>
+                <p>Loading products...</p>
+            </div>
         </section>
-    </main>
 
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <h3>Join Our Newsletter</h3>
+                <p>Subscribe to get 10% off your first order and updates on new arrivals</p>
+                <form id="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    <!-- About Section -->
+    <section id="about-section" class="about-section">
+        <div class="container">
+            <h2>About Trendy Tees</h2>
+            <p>We bring you the most comfortable and stylish t-shirts for every occasion. Quality fabrics, unique designs, and perfect fit.</p>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact-section" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Have questions? Reach out to us at <a href="mailto:info@trendytees.com">info@trendytees.com</a> or call +91 9876543210.</p>
+        </div>
+    </section>
+    </main>
+    
     <div class="cart-overlay" id="cart-overlay">
         <div class="cart-sidebar">
             <div class="cart-header">
-                <h3>Your Cart</h3>
+                <h3>Your Shopping Cart (<span id="cart-count-sidebar">0</span>)</h3>
                 <button class="close-cart" id="close-cart">&times;</button>
             </div>
             <div class="cart-items" id="cart-items">
                 <!-- Cart items will be loaded here -->
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>Your cart is empty</p>
+                    <a href="#products" class="btn btn-primary">Continue Shopping</a>
+                </div>
             </div>
             <div class="cart-total">
-                <p>Total: ₹<span id="cart-total">0.00</span></p>
-                <button class="checkout-btn" id="checkout-btn">Checkout</button>
+                <div class="cart-summary-details" id="cart-summary-details">
+                    <!-- Cart summary items will be injected here by JS -->
+                </div>
+                <div class="cart-total-row">
+                    <span class="cart-total-label">Total:</span>
+                    <span class="cart-total-value" id="cart-total">₹0.00</span>
+                </div>
+                <button class="checkout-btn" id="checkout-btn" style="width:100%;margin-top:15px;">
+                    <i class="fas fa-credit-card"></i> Proceed to Checkout
+                </button>
+                <p class="cart-note">Free shipping on orders over ₹2000!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-modal" id="product-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="close-modal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-images">
+                    <div class="main-image">
+                        <img id="modal-main-image" src="" alt="">
+                    </div>
+                    <div class="thumbnail-images">
+                        <!-- Thumbnails will be added here -->
+                    </div>
+                </div>
+                <div class="modal-details">
+                    <h3 id="modal-product-title"></h3>
+                    <div class="price-rating">
+                        <span class="price" id="modal-product-price"></span>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="review-count">(42 reviews)</span>
+                        </div>
+                    </div>
+                    <p id="modal-product-description"></p>
+                    <div class="size-selector">
+                        <label>Size:</label>
+                        <div class="size-options">
+                            <button class="size-option">S</button>
+                            <button class="size-option active">M</button>
+                            <button class="size-option">L</button>
+                            <button class="size-option">XL</button>
+                            <button class="size-option">XXL</button>
+                        </div>
+                    </div>
+                    <div class="color-selector">
+                        <label>Color:</label>
+                        <div class="color-options">
+                            <button class="color-option" style="background-color: #ffffff;" data-color="White"></button>
+                            <button class="color-option" style="background-color: #000000;" data-color="Black"></button>
+                            <button class="color-option" style="background-color: #e74c3c;" data-color="Red"></button>
+                        </div>
+                    </div>
+                    <div class="quantity-selector">
+                        <label>Quantity:</label>
+                        <div class="quantity-control">
+                            <button class="quantity-btn minus" data-action="decrease">-</button>
+                            <input type="number" value="1" min="1" max="10">
+                            <button class="quantity-btn plus" data-action="increase">+</button>
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <button class="btn btn-primary" id="add-to-cart-modal">Add to Cart</button>
+                        <button class="btn btn-secondary">Wishlist <i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="product-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Free shipping on orders over ₹2000</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-undo"></i>
+                            <span>30-day easy returns</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <footer class="shop-footer">
         <div class="container">
-            <div class="footer-links">
-                <div class="footer-section">
-                    <h4>Shop</h4>
-                    <ul>
-                        <li><a href="#">All Products</a></li>
-                        <li><a href="#">New Arrivals</a></li>
-                        <li><a href="#">Best Sellers</a></li>
-                    </ul>
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <h4>About Trendy Tees</h4>
+                    <p>We bring you the most comfortable and stylish t-shirts for every occasion. Quality fabrics, unique designs, and perfect fit.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Help</h4>
+                <div class="footer-section links">
+                    <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="#">Shipping Info</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Size Guide</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Contact</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section links">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, Mumbai, India</li>
+                        <li><i class="fas fa-phone"></i> +91 9876543210</li>
+                        <li><i class="fas fa-envelope"></i> info@trendytees.com</li>
                     </ul>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2023 Trendy Tees. All rights reserved.</p>
+            <div class="footer-bottom">
+                <div class="payment-methods">
+                    <img src="https://via.placeholder.com/40x25" alt="Visa">
+                    <img src="https://via.placeholder.com/40x25" alt="Mastercard">
+                    <img src="https://via.placeholder.com/40x25" alt="PayPal">
+                    <img src="https://via.placeholder.com/40x25" alt="UPI">
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2023 Trendy Tees. All rights reserved.</p>
+                    <div class="legal-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+=======
+    <main class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Welcome to my personal page and my T-shirt shop!</p>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <!-- Project content -->
+        </section>
+
+        <section id="shop-preview">
+            <h2>Check Out My T-Shirt Shop</h2>
+            <div class="shop-teaser">
+                <img src="images/tshirt-sample.jpg" alt="Trendy T-shirts">
+                <a href="shop.html" class="btn">Visit Shop</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 My Profile. All rights reserved.</p>
+            <div class="theme-switcher">
+                <button id="theme-light">Light</button>
+                <button id="theme-dark">Dark</button>
+>>>>>>> Stashed changes
             </div>
         </div>
     </footer>
 
+<<<<<<< Updated upstream
     <button class="scroll-to-top" id="scroll-to-top">
         <i class="fas fa-arrow-up"></i>
     </button>
@@ -100,20 +444,22 @@
         <div class="spinner"></div>
     </div>
 
-    <script src="shop.js"></script>
-
     <!-- Cookie Consent Popup -->
     <div id="cookie-consent" class="cookie-consent" style="display:none;">
         <div class="cookie-content">
             <p>
-                This site uses cookies to enhance your experience. By continuing to browse, you agree to our use of cookies.
-                <a href="#">Learn more</a>
+                We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
+                <a href="#">More info</a>
             </p>
-            <button id="accept-cookies">Accept</button>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="btn btn-primary">Accept</button>
+                <button id="decline-cookies" class="btn btn-outline">Decline</button>
+            </div>
         </div>
     </div>
+
     <script>
-        // Show cookie consent if not already accepted
+        // Cookie helper functions
         function setCookie(name, value, days) {
             const d = new Date();
             d.setTime(d.getTime() + (days*24*60*60*1000));
@@ -124,15 +470,115 @@
             const parts = value.split("; " + name + "=");
             if (parts.length === 2) return parts.pop().split(";").shift();
         }
-        window.addEventListener('DOMContentLoaded', function() {
-            if (!getCookie('cookiesAccepted')) {
-                document.getElementById('cookie-consent').style.display = 'block';
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const consent = getCookie('cookiesAccepted');
+            const popup = document.getElementById('cookie-consent');
+            if (!consent) {
+                popup.style.display = 'block';
+            } else {
+                popup.style.display = 'none';
             }
+
             document.getElementById('accept-cookies').onclick = function() {
                 setCookie('cookiesAccepted', 'yes', 365);
-                document.getElementById('cookie-consent').style.display = 'none';
+                popup.style.display = 'none';
             };
+            document.getElementById('decline-cookies').onclick = function() {
+                setCookie('cookiesAccepted', 'no', 365);
+                popup.style.display = 'none';
+            };
+
+            // --- Cart Open/Close Logic ---
+            const cartOverlay = document.getElementById('cart-overlay');
+            const cartLink = document.getElementById('cart-link');
+            const closeCartBtn = document.getElementById('close-cart');
+
+            if (cartLink && cartOverlay) {
+                cartLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    cartOverlay.style.display = 'block';
+                });
+            }
+            if (closeCartBtn && cartOverlay) {
+                closeCartBtn.addEventListener('click', function() {
+                    cartOverlay.style.display = 'none';
+                });
+            }
+            // Optional: Close cart when clicking outside the sidebar
+            cartOverlay.addEventListener('click', function(e) {
+                if (e.target === cartOverlay) {
+                    cartOverlay.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script>
+        // Update cart summary details in the sidebar
+        function updateCartSummary() {
+            const cartSummary = document.getElementById('cart-summary-details');
+            if (!cartSummary) return;
+            if (cart.length === 0) {
+                cartSummary.innerHTML = '<p class="cart-empty-summary">Your cart is empty.</p>';
+                return;
+            }
+            let html = '<ul class="cart-summary-list">';
+            cart.forEach(item => {
+                html += `<li>
+                    <span class="cart-summary-name">${item.name}</span>
+                    <span class="cart-summary-qty">x${item.quantity}</span>
+                    <span class="cart-summary-price">₹${(item.price * item.quantity).toFixed(2)}</span>
+                </li>`;
+            });
+            html += '</ul>';
+            cartSummary.innerHTML = html;
+        }
+
+        // Call updateCartSummary() inside your updateCart() function after updating the cart display
+        // Example:
+        function updateCart() {
+            // ...existing cart update logic...
+            updateCartSummary();
+            // ...rest of your code...
+        }
+
+        // Checkout button logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkoutBtn = document.getElementById('checkout-btn');
+            if (checkoutBtn) {
+                checkoutBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // Save cart and total to localStorage for payment page
+                    localStorage.setItem('orderCart', JSON.stringify(cart));
+                    localStorage.setItem('orderTotal', document.getElementById('cart-total').textContent);
+                    window.location.href = 'payment.html';
+                });
+            }
+        });
+    </script>
+    <script src="shop.js"></script>
+    <script>
+        // Add event listeners to remove buttons
+        document.querySelectorAll('.remove-item').forEach(button => {
+            button.addEventListener('click', removeFromCart);
+        });
+
+        // Add event listeners to quantity buttons
+        document.querySelectorAll('.quantity-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                updateQuantity(e, button.getAttribute('data-action'));
+            });
         });
     </script>
 </body>
 </html>
+=======
+    <div class="cookie-consent">
+        <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+        <button id="accept-cookies">Accept</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
+>>>>>>> Stashed changes
